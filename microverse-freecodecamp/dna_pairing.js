@@ -13,9 +13,30 @@ The character and its pair are paired up in an array, and all the arrays are gro
 
 
 function pairElement(str) {
-    return str;
-}
+    const pairs = [];
 
+    for (let i = 0; i < str.length; i++) {
+
+        const char = str[i];
+        switch (char) {
+            case 'A':
+                pairs.push(['A', 'T']);
+                break;
+            case 'T':
+                pairs.push(['T', 'A']);
+                break;
+            case 'C':
+                pairs.push(['C', 'G']);
+                break;
+            case 'G':
+                pairs.push(['G', 'C']);
+                break;
+            default:
+                break;
+        }
+    }
+    return pairs;
+}
 pairElement("GCG");
 
 
