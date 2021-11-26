@@ -14,7 +14,7 @@ const divider = (num, div, fix) => {
 
     const result = num / div;
 
- 
+
 
     return result.toFixed(fix);
 }
@@ -49,9 +49,12 @@ function plusMinus(arr) {
     neg = divider(neg, arr.length, 6);
     ceros = divider(ceros, arr.length, 6);
 
+    console.log(pos);
+    console.log(neg);
+    console.log(ceros);
 
     return [pos, neg, ceros];
 }
 
 
-console.log(plusMinus([-1, 1, 0, 2, 4]))
+console.log(plusMinus([-4, 3, -9, 0, 4, 1]))
